@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Proste_sciany.obj-68d1d545e95b339cdf601d2b70cc3d36.mesh"
+
+[deps]
+
+files=[ "res://.import/Proste_sciany.obj-68d1d545e95b339cdf601d2b70cc3d36.mesh" ]
+
+source_file="res://Assets/Walls/Proste_sciany.obj"
+dest_files=[ "res://.import/Proste_sciany.obj-68d1d545e95b339cdf601d2b70cc3d36.mesh", "res://.import/Proste_sciany.obj-68d1d545e95b339cdf601d2b70cc3d36.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

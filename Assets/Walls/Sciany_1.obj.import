@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Sciany_1.obj-eea3135f45c04f351ffd3f7fb15aef57.mesh"
+
+[deps]
+
+files=[ "res://.import/Sciany_1.obj-eea3135f45c04f351ffd3f7fb15aef57.mesh" ]
+
+source_file="res://Assets/Walls/Sciany_1.obj"
+dest_files=[ "res://.import/Sciany_1.obj-eea3135f45c04f351ffd3f7fb15aef57.mesh", "res://.import/Sciany_1.obj-eea3135f45c04f351ffd3f7fb15aef57.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
