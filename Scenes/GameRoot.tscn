@@ -9,7 +9,7 @@
 [node name="GameRoot" type="Spatial"]
 
 [node name="Floor" parent="." instance=ExtResource( 1 )]
-transform = Transform( 200, 0, 0, 0, 1, 0, 0, 0, 20, 513.933, -1, 0 )
+transform = Transform( 200, 0, 0, 0, 1, 0, 0, 0, 20, 415.221, -1, 0.0267558 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 320, 0.986, -3.775 )
