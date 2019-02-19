@@ -25,10 +25,10 @@ utils="*res://Scripts/utils.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/width=540
+window/size/height=960
 window/handheld/orientation="portrait"
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
 [input]
@@ -47,3 +47,7 @@ ui_accept={
 
 pointing/emulate_touch_from_mouse=true
 pointing/emulate_mouse_from_touch=false
+
+[rendering]
+
+quality/driver/driver_name="GLES2"

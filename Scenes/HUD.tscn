@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Label
+
+func _ready():
+	var player = utils.get_main_node().get_node(\"Player\").get_node(\"States/Fuel\")
+	player.connect(\"fuel_system\", self, \"fuel_system\")
+	pass
+
+func fuel_system(fuel):
+	#get_parent().get_node(\"fuel_bar\").value = fue
+	get_parent().get_node(\"Fuel\").text = str(fuel)
+	pass
+
+
+# script: fuel_bar built-in
+# extends TextureProgress
+
+#func _ready():
+	#var ship = get_node(\"/root/GameRoot\").get_node(\"ship\").get_node(\"states/fuel\")
+	#ship.connect(\"fuel_system\", self, \"fuel_system\")
+	#print(get_parent().get_node(\"fuel_bar\").name)
+	
+	#pass
+	
+#func fuel_system(fuel):
+
+	#get_parent().get_node(\"fuel_bar\").value = fuel
+	#pass"
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Fuel" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 26.0
+align = 1
+valign = 2
+script = SubResource( 1 )
+

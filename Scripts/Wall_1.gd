@@ -1,17 +1,17 @@
 extends MeshInstance
 
-onready var endPosition = get_node("Position3D")
+#onready var endPosition = get_node("Position3D")
 onready var player = utils.get_main_node().get_node("Player")
-onready var camera = utils.get_main_node().get_node("Camera")
+#onready var camera = utils.get_main_node().get_node("Camera")
 
 signal destroyed
 
 func _ready():
-	#connect("body_entered", self, "on_body_entered")
+	#get_node("StaticBody/shapeWall").connect("body_entered", self, "on_body_entered")
 	player.connect("playerDead", self, "onPlayerDead")
 	set_process(true)
 	#print(get_parent().translation.x)
-	
+	#get_node("Area").connect("body_exited", self, "on_body_exited")
 	#print(get_parent().get_global_transform().origin)
 	#print(endPosition.get_global_transform().origin)
 	#print(player.get_global_transform().origin)
@@ -26,18 +26,24 @@ func onPlayerDead():
 	pass
 
 #func on_body_entered(other):
+	#player.queue_free()
+	#pass
+	
+#func on_body_exited(other):
 	#print(str('Body entered: ', other))
 	#create_explosion()
 	#player.queue_free()
+	#print(self)
+	#emit_signal("destroyed", self)
 	#pass
 
-func _physics_process(delta):
+#func _physics_process(delta):
 	#print(camera.get_global_transform().origin.x)
-	if endPosition.get_global_transform().origin.x <= player.get_global_transform().origin.x - 100: #player.translation.x >= endPosition.translation.x + 100:
+#	if endPosition.get_global_transform().origin.x <= player.get_global_transform().origin.x - 100: #player.translation.x >= endPosition.translation.x + 100:
 		#self.queue_free()
-		emit_signal("destroyed")
+		#emit_signal("destroyed")
 		#endPosition.
 		#print(endPosition.translation.x)
 		#print(player.translation.x)
 		#queue_free()
-	pass
+#		pass
