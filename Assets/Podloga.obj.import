@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Podloga.obj-ea29232471e9244bf824bff84aaa05ad.mesh"
+
+[deps]
+
+files=[ "res://.import/Podloga.obj-ea29232471e9244bf824bff84aaa05ad.mesh" ]
+
+source_file="res://Assets/Podloga.obj"
+dest_files=[ "res://.import/Podloga.obj-ea29232471e9244bf824bff84aaa05ad.mesh", "res://.import/Podloga.obj-ea29232471e9244bf824bff84aaa05ad.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

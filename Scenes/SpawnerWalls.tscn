@@ -8,3 +8,5 @@ script = ExtResource( 1 )
 
 [node name="Container" type="Spatial" parent="."]
 
+[node name="ContainerFloor" type="Spatial" parent="."]
+
