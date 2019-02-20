@@ -1,25 +1,29 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=3]
-[ext_resource path="res://default_env.tres" type="Environment" id=4]
-[ext_resource path="res://Scenes/SpawnerWalls.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Ryba/Asset+animacja/Ryba+animacja.dae" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://default_env.tres" type="Environment" id=5]
+[ext_resource path="res://Scenes/SpawnerWalls.tscn" type="PackedScene" id=6]
 
 [node name="GameRoot" type="Spatial"]
 
 [node name="Floor" parent="." instance=ExtResource( 1 )]
-transform = Transform( 200, 0, 0, 0, 1, 0, 0, 0, 20, 415.221, -1, 0.0267558 )
+transform = Transform( 300, 0, 0, 0, 1, 0, 0, 0, 20, 415.221, -1, 0.0267558 )
+material/0 = null
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 320, 0.986, -3.775 )
 
-[node name="Camera" parent="." instance=ExtResource( 3 )]
+[node name="Scene Root" parent="Player" instance=ExtResource( 3 )]
+
+[node name="Camera" parent="." instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-008, 0.223931, -0.974605, 0, 0.974605, 0.223931, 1, 9.78834e-009, -4.26014e-008, 56.4622, 74.81, 3.04 )
-environment = ExtResource( 4 )
+environment = ExtResource( 5 )
 current = true
 
-[node name="SpawnerWalls" parent="." instance=ExtResource( 5 )]
+[node name="SpawnerWalls" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 2, 0 )
 
 [node name="LeftScreen" type="Control" parent="."]
@@ -31,6 +35,10 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -960.0
 margin_bottom = 1080.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.979001, -0.0141551, -0.203365, 0.203857, 0.0679785, 0.976638, 0, -0.997586, 0.0694367, 358.852, 78.193, -3.18953 )
+light_energy = 0.4
 
 [connection signal="gui_input" from="LeftScreen" to="Player" method="_on_LeftScreen_gui_input"]
 [connection signal="gui_input" from="RightScreen" to="Player" method="_on_RightScreen_gui_input"]

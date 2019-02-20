@@ -1,0 +1,23 @@
+[gd_resource type="PlaneMesh" load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Podloga/Piasek_woda_diffuse.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Podloga/Piasek1_AO.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Podloga/Piasek1.png" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 3 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 2 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+
+[resource]
+
+material = SubResource( 1 )
+size = Vector2( 1, 2.5 )
+
