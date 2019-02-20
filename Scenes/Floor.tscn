@@ -1,14 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Podloga.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Scripts/Floor.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Podloga/Podloga.tres" type="PlaneMesh" id=1]
+[ext_resource path="res://Assets/Podloga/Piasek_woda_diffuse.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Podloga/Piasek1_AO.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Podloga/Piasek1.png" type="Texture" id=4]
 
 [sub_resource type="SpatialMaterial" id=2]
 
-albedo_color = Color( 0.00784314, 0.113725, 0.976471, 1 )
-
-[sub_resource type="BoxShape" id=1]
-
+albedo_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 3 )
+ao_on_uv2 = false
+ao_texture_channel = 0
 
 [node name="Floor" type="MeshInstance"]
 mesh = ExtResource( 1 )

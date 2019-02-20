@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Sciana_300j_3.obj-33179194971363a12db7e1a637afa7fb.mesh"
+
+[deps]
+
+files=[ "res://.import/Sciana_300j_3.obj-33179194971363a12db7e1a637afa7fb.mesh" ]
+
+source_file="res://Assets/Walls/Sciana_300j_3.obj"
+dest_files=[ "res://.import/Sciana_300j_3.obj-33179194971363a12db7e1a637afa7fb.mesh", "res://.import/Sciana_300j_3.obj-33179194971363a12db7e1a637afa7fb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

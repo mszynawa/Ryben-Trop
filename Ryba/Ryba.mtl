@@ -1,0 +1,12 @@
+# Blender MTL File: 'Sciany1.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 650.903979
+Ka 0.179487 0.179487 0.179487
+Kd 0.061937 0.169948 0.190164
+Ks 0.311966 0.311966 0.311966
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 3
