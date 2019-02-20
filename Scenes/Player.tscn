@@ -24,7 +24,6 @@ material/0 = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="States" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Fuel" type="Spatial" parent="States"]
 script = ExtResource( 2 )
