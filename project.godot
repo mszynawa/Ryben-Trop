@@ -25,10 +25,10 @@ utils="*res://Scripts/utils.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/width=540
+window/size/height=960
 window/handheld/orientation="portrait"
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
 [input]
