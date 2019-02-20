@@ -24,3 +24,6 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 121.369, 0, 0.252657 )
 [node name="PowerUp2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 142.815, 0, 0.252657 )
 
+[node name="PowerUp3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -126.362, 0, 0.252657 )
+
