@@ -7,6 +7,7 @@ var collision = Vector3()
 #onready var leftScreen = utils.get_main_node().get_node("LeftScreen")
 #onready var rightScreen = utils.get_main_node().get_node("RightScreen")
 signal playerDead
+signal playerSpeed(speed)
 
 func _ready():
 	#leftScreen.connect("gui_input", self, "change_position")
@@ -35,6 +36,8 @@ func _physics_process(delta):
 			emit_signal("playerDead")
 		#elif collision.collider.get_parent().is_in_group("obstacles"):
 		#	collision.collider.get_parent().queue_free()
+	
+	emit_signal("playerSpeed", speed)
 	pass
 
 func _on_LeftScreen_gui_input(event):
