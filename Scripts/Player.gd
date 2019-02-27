@@ -33,10 +33,11 @@ func _physics_process(delta):
 	if collision:
 		#print(collision.collider)	
 		if not collision.collider.get_parent().is_in_group("obstacles"):
+			print("[Player.gd] Player dead.")
+			self.queue_free()
 			emit_signal("playerDead")
 		#elif collision.collider.get_parent().is_in_group("obstacles"):
-		#	collision.collider.get_parent().queue_free()
-	
+		#collision.collider.get_parent().queue_free()
 	emit_signal("playerSpeed", speed)
 	pass
 
