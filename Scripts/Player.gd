@@ -29,7 +29,7 @@ func _physics_process(delta):
 	direction = direction * speed * delta
 	
 	collision = move_and_collide(direction)
-	
+
 	if collision:
 		#print(collision.collider)	
 		if not collision.collider.get_parent().is_in_group("obstacles"):

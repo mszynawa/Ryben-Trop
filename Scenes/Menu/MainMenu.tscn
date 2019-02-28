@@ -1,6 +1,69 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "# script: StartButton (built-in)
+
+extends Button
+
+export (String) var sceneToLoad = \"GameRoot\"
+"
+
+[sub_resource type="GDScript" id=2]
+
+script/source = "# script: StartButton (built-in)
+
+extends Button
+
+export (String) var sceneToLoad = \"OptionsScene\""
+
+[sub_resource type="GDScript" id=3]
+
+script/source = "# script: StartButton (built-in)
+
+extends Button
+
+export (String) var sceneToLoad = \"Quit\""
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Logo" type="TextureRect" parent="Menu"]
+margin_right = 540.0
+
+[node name="Buttons" type="VBoxContainer" parent="Menu"]
+margin_top = 4.0
+margin_right = 540.0
+margin_bottom = 192.0
+
+[node name="StartButton" type="Button" parent="Menu/Buttons"]
+margin_right = 540.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+text = "START GAME"
+script = SubResource( 1 )
+
+[node name="OptionsButton" type="Button" parent="Menu/Buttons"]
+margin_top = 64.0
+margin_right = 540.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 0, 60 )
+text = "OPTIONS"
+script = SubResource( 2 )
+
+[node name="ExitButton" type="Button" parent="Menu/Buttons"]
+margin_top = 128.0
+margin_right = 540.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 0, 60 )
+text = "EXIT"
+script = SubResource( 3 )
 
