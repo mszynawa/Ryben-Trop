@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Assets/Ryba/Zęby.material" type="Material" id=1]
-[ext_resource path="res://Assets/Ryba/Ryba.material" type="Material" id=2]
-[ext_resource path="res://Assets/Ryba/Język.material" type="Material" id=3]
-[ext_resource path="res://Assets/Ryba/Powieki.material" type="Material" id=4]
-[ext_resource path="res://Assets/Ryba/Oczy.material" type="Material" id=5]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Ryba/Zęby.material" type="Material" id=2]
+[ext_resource path="res://Assets/Ryba/Ryba.material" type="Material" id=3]
+[ext_resource path="res://Assets/Ryba/Język.material" type="Material" id=4]
+[ext_resource path="res://Assets/Ryba/Powieki.material" type="Material" id=5]
+[ext_resource path="res://Assets/Ryba/Oczy.material" type="Material" id=6]
+[ext_resource path="res://Scripts/Fuel.gd" type="Script" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -16,7 +18,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97751,
 "index_count": 6528,
-"material": ExtResource( 1 ),
+"material": ExtResource( 2 ),
 "name": "Zęby",
 "primitive": 4,
 "skeleton_aabb": [ AABB( 0.448654, -1.22816, -0.671055, 0.270856, 0.347541, 1.34031 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, -0.380263, -0.654473, 1.23899, 0.4337, 1.34031 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, -0.380263, -0.654473, 1.23899, 0.4337, 1.34031 ) ],
@@ -29,7 +31,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 97751,
 "index_count": 14268,
-"material": ExtResource( 2 ),
+"material": ExtResource( 3 ),
 "name": "Ryba",
 "primitive": 4,
 "skeleton_aabb": [ AABB( -1.38923, -1.3192, -1.47591, 2.78777, 2.4307, 2.95003 ), AABB( -0.664204, -0.30059, -1.47591, 2.06275, 1.82668, 2.95003 ), AABB( -1.23802, 0, -1.16088, 1.71145, 1.4927, 2.31997 ), AABB( -1.85145, 0, -1.0909, 1.43187, 1.33457, 2.18001 ), AABB( -1.57365, -0.786171, -1.47591, 2.90783, 1.89767, 1.66759 ), AABB( -1.33718, -0.477234, -1.50045, 1.29569, 1.10973, 0.762317 ), AABB( -1.54893, -1.3192, -1.47591, 2.94747, 2.4307, 2.50628 ), AABB( -1.37768, -1.07762, -1.50045, 1.7605, 1.23072, 1.23564 ), AABB( -1.954, -1.3192, -1.22084, 2.75271, 2.40637, 2.43989 ), AABB( -2.24496, -0.797079, -0.869955, 1.24496, 1.71765, 1.73811 ), AABB( -2.91113, -0.547284, -0.332793, 1.91113, 1.02547, 0.663779 ), AABB( -2.97275, -0.152606, -0.415518, 1.97275, 0.862763, 0.829241 ), AABB( -3.13872, 0, -0.139408, 2.13872, 0.869797, 0.280222 ), AABB( -2.80357, -0.730856, -0.328177, 1.80357, 0.887733, 0.654559 ), AABB( -2.92567, -0.799152, -0.118331, 1.92567, 0.686267, 0.235227 ), AABB( -1.57365, -0.786171, -0.193479, 2.9175, 1.89767, 1.66759 ), AABB( -1.33718, -0.477234, 0, 1.29569, 1.10973, 1.49866 ), AABB( -1.57058, -1.3192, -1.03217, 2.96912, 2.4005, 2.50628 ), AABB( -1.37768, -1.07762, 0, 1.7605, 1.23072, 1.49866 ) ],
@@ -42,7 +44,7 @@ surfaces/2 = {
 "blend_shape_data": [  ],
 "format": 97751,
 "index_count": 3036,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "name": "Język",
 "primitive": 4,
 "skeleton_aabb": [ AABB( -1.10084, -1.03077, -0.491229, 2.58139, 0.535712, 0.964754 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -1.07939, -1.03077, -0.491229, 2.55994, 0.535712, 0.964754 ), AABB( -1.10084, -1.03077, -0.491229, 2.58139, 0.535712, 0.964754 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -1.10084, -1.03077, -0.491229, 2.58139, 0.535712, 0.964754 ) ],
@@ -55,7 +57,7 @@ surfaces/3 = {
 "blend_shape_data": [  ],
 "format": 97751,
 "index_count": 12288,
-"material": ExtResource( 4 ),
+"material": ExtResource( 5 ),
 "name": "Powieki",
 "primitive": 4,
 "skeleton_aabb": [ AABB( -0.14036, -0.177722, -1.42499, 1.15826, 1.2063, 2.84819 ), AABB( -0.0837603, -0.141411, -1.41711, 0.842669, 1.16999, 2.83244 ), AABB( -0.0357666, -0.141411, -1.41711, 0.794675, 1.16999, 2.83244 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.14036, -0.177722, -1.42499, 1.15826, 1.2063, 1.19598 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.14036, -0.177722, -1.42499, 1.15826, 0.823444, 1.19598 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.0518344, 0, -0.622882, 0.0111679, 0.487076, 1.24396 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.14036, -0.177722, 0, 1.15826, 1.2063, 1.4232 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.14036, -0.177722, 0, 1.15826, 0.823444, 1.4232 ) ],
@@ -68,7 +70,7 @@ surfaces/4 = {
 "blend_shape_data": [  ],
 "format": 97751,
 "index_count": 5760,
-"material": ExtResource( 5 ),
+"material": ExtResource( 6 ),
 "name": "Oczy",
 "primitive": 4,
 "skeleton_aabb": [ AABB( -0.108953, 0.0857432, -1.08214, 0.154243, 0.329762, 2.03146 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.108953, -0.115233, -1.39063, 1.14173, 1.14109, 1.14282 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.113352, -0.115233, 0, 1.14613, 1.14288, 1.38884 ) ],
@@ -150,7 +152,13 @@ tracks/9/imported = true
 tracks/9/enabled = true
 tracks/9/keys = PoolRealArray( 0.0416666, 1, -9.31323e-009, 4.47035e-008, 0, 0.0048968, -0.081605, 0.00049348, 0.996653, 1, 1, 1, 0.416667, 1, -9.31323e-009, 4.47035e-008, 0, 0.000303577, -0.022136, -0.013064, 0.99967, 1, 1, 1, 0.791667, 1, -9.31323e-009, 4.47035e-008, 0, 0.0048968, -0.081605, 0.00049348, 0.996653, 1, 1, 1 )
 
-[node name="Fish" type="Spatial"]
+[sub_resource type="CapsuleShape" id=3]
+
+radius = 1.74931
+height = 1.66028
+
+[node name="Fish" type="KinematicBody"]
+script = ExtResource( 1 )
 
 [node name="Armature" type="Spatial" parent="."]
 
@@ -261,4 +269,13 @@ material/4 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/default = SubResource( 2 )
+
+[node name="Shape" type="CollisionShape" parent="."]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -1.08914, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="States" type="Spatial" parent="."]
+
+[node name="Fuel" type="Spatial" parent="States"]
+script = ExtResource( 7 )
 

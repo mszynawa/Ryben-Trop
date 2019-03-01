@@ -17,7 +17,7 @@ func on_body_entered(body):
 	pass
 	
 func boost_over(timer):
-	var player = utils.get_main_node().get_node("Player")
+	var player = utils.get_main_node().get_node("Fish")
 	var speed = player.speed
 	player.speed = speed - 15 #speed - (speed * 30 / 100)
 

@@ -1,6 +1,6 @@
 extends Camera
 
-onready var player = utils.get_main_node().get_node("Player")
+onready var player = utils.get_main_node().get_node("Fish")
 
 var camera_speed = 25 #player.speed #25
 var direction = Vector3()
