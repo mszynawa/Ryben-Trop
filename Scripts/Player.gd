@@ -4,6 +4,7 @@ export var speed = 25
 var direction = Vector3(0, 0, 0)
 var collision = Vector3()
 
+var animFish
 #onready var leftScreen = utils.get_main_node().get_node("LeftScreen")
 #onready var rightScreen = utils.get_main_node().get_node("RightScreen")
 
@@ -12,7 +13,14 @@ signal playerDead
 
 func _ready():
 	#leftScreen.connect("gui_input", self, "change_position")
+	animFish = get_node("AnimationPlayer")
+	
 	add_to_group("player")
+	
+	# Set animation
+	var animToPlay = "default"
+	get_node("AnimationPlayer").get_animation(animToPlay).set_loop(true)
+	animFish.play(animToPlay)
 	pass
 	
 func _physics_process(delta):
@@ -35,13 +43,17 @@ func _physics_process(delta):
 		#print(collision.collider)	
 		if not collision.collider.get_parent().is_in_group("obstacles"):
 			emit_signal("playerDead")
-			print("[Player.gd] Player dead.")
+			print("[Player.gd] Fish dead.")
 			#self.queue_free()
 			
 			get_tree().paused = true
 		#elif collision.collider.get_parent().is_in_group("obstacles"):
 		#collision.collider.get_parent().queue_free()
 	emit_signal("playerSpeed", speed)
+	
+	
+	
+	
 	pass
 
 func _on_LeftScreen_gui_input(event):

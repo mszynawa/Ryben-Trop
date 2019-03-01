@@ -5,7 +5,7 @@
 script/source = "extends Label
 
 func _ready():
-	var player = utils.get_main_node().get_node(\"Player\")
+	var player = utils.get_main_node().get_node(\"Fish\")
 	player.connect(\"playerSpeed\", self, \"playerSpeed\")
 	pass
 
@@ -20,7 +20,7 @@ func playerSpeed(speed):
 script/source = "extends Label
 
 func _ready():
-	var player = utils.get_main_node().get_node(\"Player\").get_node(\"States/Fuel\")
+	var player = utils.get_main_node().get_node(\"Fish\").get_node(\"States/Fuel\")
 	player.connect(\"fuel_system\", self, \"fuel_system\")
 	pass
 
