@@ -1,32 +1,30 @@
 [gd_scene load_steps=3 format=2]
 
 [sub_resource type="GDScript" id=1]
-
 script/source = "extends Label
 
 func _ready():
-	var player = utils.get_main_node().get_node(\"Fish\")
-	player.connect(\"playerSpeed\", self, \"playerSpeed\")
+	#var player = utils.get_main_node().get_node(\"Fish\")
+	#player.connect(\"playerSpeed\", self, \"playerSpeed\")
 	pass
 
 func playerSpeed(speed):
-	get_parent().get_node(\"Speed\").text = str(speed)
+	#get_parent().get_node(\"Speed\").text = str(speed)
 	pass
 
 "
 
 [sub_resource type="GDScript" id=2]
-
 script/source = "extends Label
 
 func _ready():
-	var player = utils.get_main_node().get_node(\"Fish\").get_node(\"States/Fuel\")
-	player.connect(\"fuel_system\", self, \"fuel_system\")
+	#var player = utils.get_main_node().get_node(\"Fish\").get_node(\"States/Fuel\")
+	#player.connect(\"fuel_system\", self, \"fuel_system\")
 	pass
 
 func fuel_system(fuel):
 	#get_parent().get_node(\"fuel_bar\").value = fue
-	get_parent().get_node(\"Fuel\").text = str(fuel)
+	#get_parent().get_node(\"Fuel\").text = str(fuel)
 	pass
 
 

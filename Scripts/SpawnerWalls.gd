@@ -8,7 +8,7 @@ const scn_floor = preload("res://Scenes/Floor.tscn")
 const WALL_WIDTH = 300
 const AMOUNT_TO_FILL_VIEW = 3
 
-var wallArray = [ preload("res://Scenes/Wall_1.tscn"), preload("res://Scenes/Wall_2.tscn"), preload("res://Scenes/Wall_3.tscn") ]
+var wallArray = [ preload("res://Scenes/Wall1.tscn"), preload("res://Scenes/Wall2.tscn"), preload("res://Scenes/Wall3.tscn") ]
 
 var wallData = [ ]
 var floorData = [ ]
@@ -79,13 +79,14 @@ func spawn_floor():
 	
 	new_floor.set_transform(get_transform())
 	#new_walls.transform(transform)
-	#new_floor.connect("destroyed", self, "go_next_floor")
+	new_floor.connect("destroyed", self, "go_next_floor")
 	get_node("ContainerFloor").add_child(new_floor)
 	
 	new_floor.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition
 	pass
 
 func go_next_floor(object):
+	print("Spawn next floor")
 	if object != floorData.back() and object != floorData.front():
 		var obj = floorData.front()
 		obj.queue_free()

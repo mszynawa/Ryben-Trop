@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Blob Game"
-run/main_scene="res://Scenes/Menu/MainMenu.tscn"
+run/main_scene="res://Scenes/GameRoot.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -51,3 +51,4 @@ pointing/emulate_mouse_from_touch=false
 [rendering]
 
 quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
