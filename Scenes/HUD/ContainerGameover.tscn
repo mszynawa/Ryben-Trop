@@ -13,3 +13,4 @@ margin_bottom = 60.0
 text = "PLAY AGAIN"
 flat = true
 
+[connection signal="gui_input" from="PlayAgainBtn" to="." method="_on_PlayAgainBtn_gui_input"]
