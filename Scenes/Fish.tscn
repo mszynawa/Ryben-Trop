@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Ryba/Zeby.material" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Ryba/Jezyk.material" type="Material" id=4]
 [ext_resource path="res://Assets/Ryba/Powieki.material" type="Material" id=5]
 [ext_resource path="res://Assets/Ryba/Oczy.material" type="Material" id=6]
+[ext_resource path="res://Scripts/Fuel.gd" type="Script" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Ryba"
@@ -92,4 +93,9 @@ material/4 = null
 
 [node name="Shape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )
+
+[node name="States" type="Spatial" parent="."]
+
+[node name="Fuel" type="Spatial" parent="States"]
+script = ExtResource( 7 )
 
