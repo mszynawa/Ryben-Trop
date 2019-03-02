@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Walls/Sciany1.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Scenes/Obstacles/PowerUp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Wall.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Obstacles/PowerUp.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConcavePolygonShape" id=1]
 
@@ -10,18 +11,19 @@ data = PoolVector3Array( 150, 1.1979, -25, 150, 0, -25, 150, 1.1912, -25, 150, 1
 [node name="Wall_1" type="MeshInstance"]
 mesh = ExtResource( 1 )
 material/0 = null
+script = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 1 )
 
-[node name="PowerUp" parent="." instance=ExtResource( 2 )]
+[node name="PowerUp" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123.048, 0, 1.7232 )
 
-[node name="PowerUp2" parent="." instance=ExtResource( 2 )]
+[node name="PowerUp2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 113.378, 0, -3.40988 )
 
-[node name="PowerUp3" parent="." instance=ExtResource( 2 )]
+[node name="PowerUp3" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -130.451, 0, -3.40988 )
 

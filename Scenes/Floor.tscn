@@ -1,10 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Podloga.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Assets/Podloga/Piasek_woda_diffuse.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Podloga/Piasek_AO.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Podloga/Piasek_normal.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Podloga/PiasekWodaDiffuse.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Podloga/PiasekAO.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Podloga/Piaseknormal.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Floor.gd" type="Script" id=5]
+
+
+
 
 [sub_resource type="SpatialMaterial" id=1]
 

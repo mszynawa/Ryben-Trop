@@ -51,9 +51,6 @@ func _physics_process(delta):
 		#collision.collider.get_parent().queue_free()
 	emit_signal("playerSpeed", speed)
 	
-	
-	
-	
 	pass
 
 func _on_LeftScreen_gui_input(event):

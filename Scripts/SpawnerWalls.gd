@@ -54,7 +54,7 @@ func spawn_walls():
 	#new_walls.set_transform(get_transform())
 	new_walls.set_transform(get_transform())
 	#new_walls.transform(transform)
-	new_walls.connect("destroyed", self, "go_next")
+	#new_walls.connect("destroyed", self, "go_next")
 	get_node("Container").add_child(new_walls)
 	
 	#new_walls.translation = translation + Vector3(WALL_WIDTH, 0, 0)
@@ -79,7 +79,7 @@ func spawn_floor():
 	
 	new_floor.set_transform(get_transform())
 	#new_walls.transform(transform)
-	new_floor.connect("destroyed", self, "go_next_floor")
+	#new_floor.connect("destroyed", self, "go_next_floor")
 	get_node("ContainerFloor").add_child(new_floor)
 	
 	new_floor.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition

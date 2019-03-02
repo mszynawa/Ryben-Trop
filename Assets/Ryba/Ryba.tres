@@ -1,14 +1,23 @@
 [gd_resource type="ArrayMesh" load_steps=15 format=2]
 
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Zęby_Diffuse.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Zęby_Metallic.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Zęby_Roughness.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Język_Diffuse.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Powieki_Metallic.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Powieki_Roughness.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Oczy_Diffuse.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Oczy_Metallic.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Ryba/Tekstury/Ryba_low_Oczy_Roughness.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowZebyDiffuse.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowZebyMetallic.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowZebyRoughness.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowJezykDiffuse.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowPowiekiMetallic.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowPowiekiRoughness.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowOczyDiffuse.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowOczyMetallic.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Ryba/Tekstury/RybaLowOczyRoughness.png" type="Texture" id=9]
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="SpatialMaterial" id=1]
 
