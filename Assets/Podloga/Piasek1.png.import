@@ -4,11 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.s3tc.stex"
 path.etc2="res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.etc2.stex"
+path.etc="res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.etc.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2", "etc" ],
+"vram_texture": true
+}
 
 [deps]
 
 source_file="res://Assets/Podloga/Piasek1.png"
-dest_files=[ "res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.s3tc.stex", "res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.etc2.stex" ]
+dest_files=[ "res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.s3tc.stex", "res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.etc2.stex", "res://.import/Piasek1.png-68425d3da5d23ebb0d9968a1d78e92ee.etc.stex" ]
 
 [params]
 
