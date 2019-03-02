@@ -67,3 +67,4 @@ rect_min_size = Vector2( 0, 60 )
 text = "EXIT"
 script = SubResource( 3 )
 
+[connection signal="gui_input" from="Menu/Buttons/StartButton" to="." method="_on_StartButton_gui_input"]

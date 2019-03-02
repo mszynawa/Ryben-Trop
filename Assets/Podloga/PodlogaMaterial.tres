@@ -1,8 +1,10 @@
 [gd_resource type="SpatialMaterial" load_steps=4 format=2]
 
-[ext_resource path="res://Assets/Podloga/Piasek1_diffuse.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Podloga/Piasek1_AO.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Podloga/Piasek1diffuse.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Podloga/Piasek1AO.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Podloga/Piasek1.png" type="Texture" id=3]
+
+
 
 [resource]
 
