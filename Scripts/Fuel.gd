@@ -1,6 +1,6 @@
 extends Spatial
 
-var fuel = 100
+export var fuel = 100
 var combustion = 5
 
 signal fuel_system(fuel)

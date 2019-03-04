@@ -8,7 +8,15 @@ const scn_floor = preload("res://Scenes/Floor.tscn")
 const WALL_WIDTH = 300
 const AMOUNT_TO_FILL_VIEW = 3
 
-var wallArray = [ preload("res://Scenes/Wall1.tscn"), preload("res://Scenes/Wall2.tscn"), preload("res://Scenes/Wall3.tscn") ]
+var wallArray = [ preload("res://Scenes/Walls/WallEasy1.tscn"), 
+preload("res://Scenes/Walls/WallEasy2.tscn"), 
+preload("res://Scenes/Walls/WallEasy3.tscn"),
+preload("res://Scenes/Walls/WallMedium1.tscn"),
+preload("res://Scenes/Walls/WallMedium2.tscn"),
+preload("res://Scenes/Walls/WallMedium3.tscn"),
+preload("res://Scenes/Walls/WallHard1.tscn"),
+preload("res://Scenes/Walls/WallHard2.tscn"),
+preload("res://Scenes/Walls/WallHard3.tscn") ]
 
 var wallData = [ ]
 var floorData = [ ]
@@ -18,7 +26,7 @@ onready var container = get_node("Container")
 func _ready():
 	for i in range(AMOUNT_TO_FILL_VIEW):
 		spawn_and_move()
-		spawn_floor()
+		#spawn_floor()
 	pass
 
 func spawn_and_move():
@@ -46,7 +54,7 @@ func spawn_walls():
 		pass
 	
 	#print(wallData.count())
-	var new_walls = wallArray[randi() % 3].instance()
+	var new_walls = wallArray[randi() % 9].instance()
 	wallData.append(new_walls)
 	#print(i)
 	#print(wallData)
