@@ -21,7 +21,6 @@ func _ready():
 	var animToPlay = "default"
 #	get_node("AnimationPlayer").get_animation(animToPlay).set_loop(true)
 #	animFish.play(animToPlay)
-	pass
 	
 func _physics_process(delta):
 	
@@ -50,8 +49,6 @@ func _physics_process(delta):
 		#elif collision.collider.get_parent().is_in_group("obstacles"):
 		#collision.collider.get_parent().queue_free()
 	emit_signal("playerSpeed", speed)
-	
-	pass
 
 func _on_LeftScreen_gui_input(event):
 	#if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
@@ -61,7 +58,6 @@ func _on_LeftScreen_gui_input(event):
 		direction = Vector3(0, 0, 0)
 		direction.z -= 1
 		collision = move_and_collide(direction)
-	pass
 
 func _on_RightScreen_gui_input(event):
 	#if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
@@ -69,4 +65,3 @@ func _on_RightScreen_gui_input(event):
 		direction = Vector3(0, 0, 0)
 		direction.z += 1
 		collision = move_and_collide(direction)
-	pass

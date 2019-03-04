@@ -1,15 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/HUD/container_gameover.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/HUD/ContainerGameover.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/LatoBold.tres" type="DynamicFont" id=2]
 
 [node name="ContainerGameover" type="Container"]
-anchor_right = 1.0
+anchor_top = 1.0
 anchor_bottom = 1.0
+margin_top = -960.0
+margin_right = 540.0
 script = ExtResource( 1 )
 
 [node name="PlayAgainBtn" type="Button" parent="."]
 anchor_right = 1.0
 margin_bottom = 60.0
+custom_fonts/font = ExtResource( 2 )
 text = "PLAY AGAIN"
 flat = true
 

@@ -1,4 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/GUI/FuelBar.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GUI/FuelBarFill.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/FuelBar.gd" type="Script" id=3]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Label
@@ -48,8 +52,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Speed" type="Label" parent="."]
-margin_right = 270.0
-margin_bottom = 26.0
+margin_left = 0.568802
+margin_top = 25.596
+margin_right = 270.569
+margin_bottom = 51.596
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 2
@@ -59,9 +65,23 @@ script = SubResource( 1 )
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -270.0
-margin_bottom = 26.0
+margin_top = 25.0272
+margin_bottom = 51.0272
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 2
 script = SubResource( 2 )
+
+[node name="FuelBar" type="TextureProgress" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -200.0
+margin_top = 17.1417
+margin_right = 200.0
+margin_bottom = 57.1417
+max_value = 200.0
+value = 200.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 2 )
+script = ExtResource( 3 )
 
