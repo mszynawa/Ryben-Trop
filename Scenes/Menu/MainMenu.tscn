@@ -1,8 +1,24 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GUI/MenuBackground.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/LatoBold.tres" type="DynamicFont" id=3]
+=======
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GUI/MainMenu.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GUI/Title.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GUI/NewGame.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/NewGameSelected.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GUI/Options.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GUI/OptionsSelected.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GUI/Credits.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GUI/CreditsSelected.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GUI/Exit.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GUI/ExitSelected.png" type="Texture" id=11]
+>>>>>>> Stashed changes
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -26,15 +42,17 @@ valign = 1
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -254.0
+margin_top = -415.5
 margin_right = 540.0
+margin_bottom = -107.5
 
 [node name="Buttons" type="VBoxContainer" parent="Menu"]
 margin_right = 540.0
-margin_bottom = 188.0
+margin_bottom = 412.0
 
-[node name="StartButton" type="Button" parent="Menu/Buttons"]
+[node name="StartButton" type="TextureButton" parent="Menu/Buttons"]
 margin_right = 540.0
+<<<<<<< Updated upstream
 margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 custom_fonts/font = ExtResource( 3 )
@@ -58,5 +76,31 @@ rect_min_size = Vector2( 0, 60 )
 custom_fonts/font = ExtResource( 3 )
 text = "EXIT"
 flat = true
+=======
+margin_bottom = 100.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 
-[connection signal="gui_input" from="Menu/Buttons/StartButton" to="." method="_on_StartButton_gui_input"]
+[node name="OptionsButton" type="TextureButton" parent="Menu/Buttons"]
+margin_top = 104.0
+margin_right = 540.0
+margin_bottom = 204.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+
+[node name="CreditsButton" type="TextureButton" parent="Menu/Buttons"]
+margin_top = 208.0
+margin_right = 540.0
+margin_bottom = 308.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+
+[node name="TextureButton" type="TextureButton" parent="Menu/Buttons"]
+margin_top = 312.0
+margin_right = 540.0
+margin_bottom = 412.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+>>>>>>> Stashed changes
+
+[connection signal="gui_input" from="Menu/Buttons/StartButton" to="." method="_on_TextureButton_gui_input"]
