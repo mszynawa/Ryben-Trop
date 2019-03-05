@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Ryben Trop"
+config/name="Blob Game"
 run/main_scene="res://Scenes/Menu/MainMenu.tscn"
 config/icon="res://icon.png"
 
