@@ -18,6 +18,7 @@ func _ready():
 	
 	#Timer
 	timer = Timer.new()
+
 	timer.set_one_shot(false)
 	timer.set_wait_time(1.0)
 	timer.connect("timeout", self, "onTimerTimeout")
