@@ -28,7 +28,6 @@ export var LEFT = Vector3(0, 0, -0.5)
 export var RIGHT = Vector3(0, 0, 0.5)
 
 func _physics_process(delta):
-	
 	direction = Vector3(1, 0, 0)
 	#direction.x += 1
 
@@ -44,7 +43,7 @@ func _physics_process(delta):
 	
 	#direction = direction.normalized()
 	direction = direction * speed * delta
-	
+
 	collision = move_and_collide(direction)
 
 	if collision:

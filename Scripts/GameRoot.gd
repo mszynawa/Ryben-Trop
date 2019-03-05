@@ -24,7 +24,6 @@ func _ready():
 	timer.connect("timeout", self, "onTimerTimeout")
 	timer.start()
 	add_child(timer)
-
 	pass
 
 func onPlayerDead():
@@ -50,6 +49,7 @@ func _physics_process(delta):
 	
 	if (time <= 15):
 		player.speed = player.originSpeed + intervalArray[0]
+		#print("112")
 	elif (time  >= 15 and time <= 25):
 		player.speed = player.originSpeed + intervalArray[1]
 	elif (time  >= 25 and time <= 40):
