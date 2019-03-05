@@ -6,7 +6,7 @@ extends Spatial
 const scn_floor = preload("res://Scenes/Floor.tscn")
 
 const WALL_WIDTH = 300
-const AMOUNT_TO_FILL_VIEW = 3
+const AMOUNT_TO_FILL_VIEW = 2
 
 var wallArray = [ preload("res://Scenes/Walls/WallEasy1.tscn"), 
 preload("res://Scenes/Walls/WallEasy2.tscn"), 
@@ -24,6 +24,20 @@ var floorData = [ ]
 onready var container = get_node("Container")
 
 func _ready():
+	#Spawn "start walls"
+	var startWall = preload("res://Scenes/Walls/Wall.tscn").instance()
+	wallData.append(startWall)
+	get_node("Container").add_child(startWall)
+	
+	var new_floor = scn_floor.instance()
+	floorData.append(new_floor)
+	
+	new_floor.set_transform(get_transform())
+	#new_walls.transform(transform)
+	new_floor.connect("destroyed", self, "go_next_floor")
+	get_node("ContainerFloor").add_child(new_floor)
+	
+	#Random pozostałe 2 mapy
 	for i in range(AMOUNT_TO_FILL_VIEW):
 		spawn_and_move()
 		#spawn_floor()
