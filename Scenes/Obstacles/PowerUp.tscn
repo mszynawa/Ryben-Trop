@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Textures/PowerUp.tres" type="Material" id=2]
 [ext_resource path="res://Scripts/Obstacles/PowerUp.gd" type="Script" id=3]
 
-[node name="PowerUp" index="0" instance=ExtResource( 1 )]
+[node name="PowerUp" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material/0 = ExtResource( 2 )
 script = ExtResource( 3 )

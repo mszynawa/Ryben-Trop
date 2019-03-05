@@ -2,20 +2,28 @@ extends Spatial
 
 var timer = null
 
-signal addScore
+export var intervalArray = [ 0, 10, 20, 30, 40, 50 ]
+var player = null
+
+# Time vars
+var time = 0
+var time_mult = 1.0
+
+signal changeScore
 
 func _ready():
 	get_tree().paused = false
-	var player = utils.get_main_node().get_node("Fish")
+	player = utils.get_main_node().get_node("Fish")
 	player.connect("playerDead", self, "onPlayerDead")
 	
 	#Timer
 	timer = Timer.new()
-	add_child(timer)
-	timer.connect("timeout", self, "onTimerTimeout")
+
+	timer.set_one_shot(false)
 	timer.set_wait_time(1.0)
-	timer.set_one_shot(true)
+	timer.connect("timeout", self, "onTimerTimeout")
 	timer.start()
+	add_child(timer)
 	pass
 
 func onPlayerDead():
@@ -26,5 +34,22 @@ func onPlayerDead():
 	pass
 
 func onTimerTimeout():
+	global.setPlayerScore(1)
+	emit_signal("changeScore")
 	
-	pass
+func _physics_process(delta):
+	time += delta * time_mult
+	
+	if (time <= 15):
+		player.speed = player.originSpeed + intervalArray[0]
+	elif (time  >= 15 and time <= 25):
+		player.speed = player.originSpeed + intervalArray[1]
+	elif (time  >= 25 and time <= 40):
+		player.speed = player.originSpeed + intervalArray[3]
+	elif (time  >= 50 and time <= 65):
+		player.speed = player.originSpeed + intervalArray[4]
+	elif (time  >= 65 and time <= 75):
+		player.speed = player.originSpeed + intervalArray[5]
+	elif (time  >= 75):
+		player.speed = player.originSpeed + intervalArray[6]
+		pass
