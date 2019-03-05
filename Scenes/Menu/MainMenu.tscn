@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=4 format=2]
-
-[ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/GUI/MenuBackground.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Fonts/LatoBold.tres" type="DynamicFont" id=3]
-=======
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
@@ -18,7 +11,6 @@
 [ext_resource path="res://Assets/GUI/CreditsSelected.png" type="Texture" id=9]
 [ext_resource path="res://Assets/GUI/Exit.png" type="Texture" id=10]
 [ext_resource path="res://Assets/GUI/ExitSelected.png" type="Texture" id=11]
->>>>>>> Stashed changes
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -30,14 +22,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 
-[node name="Logo" type="Label" parent="."]
-anchor_right = 1.0
-margin_top = 85.318
-margin_bottom = 122.318
-custom_fonts/font = ExtResource( 3 )
-text = "LOGO"
-align = 1
-valign = 1
+[node name="Logo" type="TextureRect" parent="."]
+margin_left = 0.697968
+margin_top = 48.5266
+margin_right = 540.698
+margin_bottom = 148.527
+texture = ExtResource( 3 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_top = 1.0
@@ -52,31 +42,6 @@ margin_bottom = 412.0
 
 [node name="StartButton" type="TextureButton" parent="Menu/Buttons"]
 margin_right = 540.0
-<<<<<<< Updated upstream
-margin_bottom = 60.0
-rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = ExtResource( 3 )
-text = "START GAME"
-flat = true
-
-[node name="OptionsButton" type="Button" parent="Menu/Buttons"]
-margin_top = 64.0
-margin_right = 540.0
-margin_bottom = 124.0
-rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = ExtResource( 3 )
-text = "OPTIONS"
-flat = true
-
-[node name="ExitButton" type="Button" parent="Menu/Buttons"]
-margin_top = 128.0
-margin_right = 540.0
-margin_bottom = 188.0
-rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = ExtResource( 3 )
-text = "EXIT"
-flat = true
-=======
 margin_bottom = 100.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
@@ -101,6 +66,5 @@ margin_right = 540.0
 margin_bottom = 412.0
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
->>>>>>> Stashed changes
 
 [connection signal="gui_input" from="Menu/Buttons/StartButton" to="." method="_on_TextureButton_gui_input"]
