@@ -2,7 +2,7 @@ extends Spatial
 
 var timer = null
 
-export var intervalArray = [ 0, 15, 25, 35, 45, 55, 65, 75, 85, 95 ]
+export var intervalArray = [ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]
 var player = null
 
 # Time vars
