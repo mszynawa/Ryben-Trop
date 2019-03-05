@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/GUI/MenuBackground.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Fonts/LatoBold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/GUI/MainMenu.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GUI/Title.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Fonts/LatoBold.tres" type="DynamicFont" id=4]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -14,14 +15,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 
-[node name="Logo" type="Label" parent="."]
-anchor_right = 1.0
-margin_top = 85.318
-margin_bottom = 122.318
-custom_fonts/font = ExtResource( 3 )
-text = "LOGO"
-align = 1
-valign = 1
+[node name="Logo" type="TextureRect" parent="."]
+margin_left = 0.697968
+margin_top = 48.5266
+margin_right = 540.698
+margin_bottom = 148.527
+texture = ExtResource( 3 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_top = 1.0
@@ -37,7 +36,7 @@ margin_bottom = 188.0
 margin_right = 540.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "START GAME"
 flat = true
 
@@ -46,7 +45,7 @@ margin_top = 64.0
 margin_right = 540.0
 margin_bottom = 124.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "OPTIONS"
 flat = true
 
@@ -55,7 +54,7 @@ margin_top = 128.0
 margin_right = 540.0
 margin_bottom = 188.0
 rect_min_size = Vector2( 0, 60 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "EXIT"
 flat = true
 

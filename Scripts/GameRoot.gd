@@ -1,7 +1,6 @@
 extends Spatial
 
 var timer = null
-var gameTime = 0
 
 export var intervalArray = [ 0, 10, 20, 30, 40, 50 ]
 var player = null
@@ -34,13 +33,6 @@ func onPlayerDead():
 	pass
 
 func onTimerTimeout():
-	#gameTime = gameTime + 1
-	#print(gameTime)
-
-	#if (gameTime <= 15):
-	#	player.speed = player.speed + 10
-	#	pass
-		
 	global.setPlayerScore(1)
 	emit_signal("changeScore")
 	
@@ -49,7 +41,6 @@ func _physics_process(delta):
 	
 	if (time <= 15):
 		player.speed = player.originSpeed + intervalArray[0]
-		#print("112")
 	elif (time  >= 15 and time <= 25):
 		player.speed = player.originSpeed + intervalArray[1]
 	elif (time  >= 25 and time <= 40):
