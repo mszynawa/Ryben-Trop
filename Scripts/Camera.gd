@@ -10,7 +10,7 @@ var direction = Vector3()
 func _ready():
 	#set_fixed_process(true)
 	camera_speed = player.speed
-	print(player.name)
+	
 	set_physics_process(true)
 	pass
 

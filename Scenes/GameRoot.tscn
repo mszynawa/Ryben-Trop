@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/GameRoot.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://default_env.tres" type="Environment" id=5]
 [ext_resource path="res://Scenes/SpawnerWalls.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/HUD/hud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/GUI/TouchScreenBtn.png" type="Texture" id=8]
 
 [node name="GameRoot" type="Spatial"]
 script = ExtResource( 1 )
@@ -17,7 +18,7 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0 )
 
 [node name="Camera" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-008, 0.642788, -0.766044, 0, 0.766044, 0.642788, 1, 2.80971e-008, -3.34849e-008, -50, 110, 0 )
+transform = Transform( -4.37114e-08, 0.642788, -0.766044, 0, 0.766044, 0.642788, 1, 2.80971e-08, -3.34849e-08, -50, 110, 0 )
 environment = ExtResource( 5 )
 current = true
 size = 60.0
@@ -38,5 +39,14 @@ margin_bottom = 960.0
 [node name="hud" parent="." instance=ExtResource( 7 )]
 pause_mode = 2
 
-[connection signal="gui_input" from="LeftScreen" to="Fish" method="_on_LeftScreen_gui_input"]
-[connection signal="gui_input" from="RightScreen" to="Fish" method="_on_RightScreen_gui_input"]
+[node name="LeftTouch" type="TouchScreenButton" parent="hud"]
+normal = ExtResource( 8 )
+pressed = ExtResource( 8 )
+action = "ui_left"
+
+[node name="RightTouch" type="TouchScreenButton" parent="hud"]
+position = Vector2( 270, 0 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 8 )
+action = "ui_right"
+
