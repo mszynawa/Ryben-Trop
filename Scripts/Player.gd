@@ -1,6 +1,8 @@
 extends KinematicBody
 
 export var speed = 25
+export var originSpeed = 25
+
 var direction = Vector3(0, 0, 0)
 var collision = Vector3()
 
@@ -21,19 +23,26 @@ func _ready():
 	var animToPlay = "default"
 #	get_node("AnimationPlayer").get_animation(animToPlay).set_loop(true)
 #	animFish.play(animToPlay)
-	
+
+export var LEFT = Vector3(0, 0, -0.5)
+export var RIGHT = Vector3(0, 0, 0.5)
+
 func _physics_process(delta):
 	
-	direction = Vector3(0, 0, 0)
-	direction.x += 1
+	direction = Vector3(1, 0, 0)
+	#direction.x += 1
 
-	if Input.is_action_pressed("ui_up"):
-		direction.z -= 1
+	if Input.is_action_pressed("ui_left"):
+		#direction.x += 2
+		#direction.z -= 1
+		direction += LEFT
 
-	if Input.is_action_pressed("ui_down"):
-		direction.z += 1
+	if Input.is_action_pressed("ui_right"):
+		#direction.x += 2
+		#direction.z += 1
+		direction += RIGHT
 	
-	direction = direction.normalized()
+	#direction = direction.normalized()
 	direction = direction * speed * delta
 	
 	collision = move_and_collide(direction)
@@ -52,12 +61,16 @@ func _physics_process(delta):
 
 func _on_LeftScreen_gui_input(event):
 	#if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+	print("trzymam")
 	if event is InputEventScreenTouch and event.pressed:
 	
 		#print(event)
 		direction = Vector3(0, 0, 0)
 		direction.z -= 1
 		collision = move_and_collide(direction)
+	elif event is InputEventScreenTouch:
+		print("12")
+		pass 
 
 func _on_RightScreen_gui_input(event):
 	#if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
