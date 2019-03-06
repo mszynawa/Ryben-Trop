@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Fish/Jezyk.material" type="Material" id=4]
 [ext_resource path="res://Assets/Fish/Powieki.material" type="Material" id=5]
 [ext_resource path="res://Assets/Fish/Oczy.material" type="Material" id=6]
-[ext_resource path="res://Scenes/Fuel.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/States.gd" type="Script" id=7]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -260,7 +260,5 @@ material/4 = null
 anims/default = SubResource( 3 )
 
 [node name="States" type="Spatial" parent="."]
-
-[node name="Fuel" type="Spatial" parent="States"]
 script = ExtResource( 7 )
 

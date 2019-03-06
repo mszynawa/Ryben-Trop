@@ -1,7 +1,10 @@
 extends KinematicBody
 
-export var speed = 25
-export var originSpeed = 25
+export var speed = 20
+export var originSpeed = 20
+
+export var minSpeed = 20
+export var maxSpeed = 100
 
 var direction = Vector3(0, 0, 0)
 var collision = Vector3()

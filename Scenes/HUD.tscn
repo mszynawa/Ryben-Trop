@@ -23,7 +23,7 @@ func playerSpeed(speed):
 script/source = "extends Label
 
 func _ready():
-	var player = utils.get_main_node().get_node(\"Fish\").get_node(\"States/Fuel\")
+	var player = utils.get_main_node().get_node(\"Fish\").get_node(\"States\")
 	player.connect(\"fuel_system\", self, \"fuel_system\")
 	pass
 
