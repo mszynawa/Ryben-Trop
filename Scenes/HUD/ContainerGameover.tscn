@@ -1,22 +1,47 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/HUD/ContainerGameover.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Fonts/LatoBold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/GUI/GameOverBg.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GUI/GameOver.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GUI/MainMenu.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/MainMenuSelect.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GUI/SwimAgain.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GUI/SwimAgainSelect.png" type="Texture" id=7]
 
-[node name="ContainerGameover" type="Container"]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_left = 1.948
-margin_top = -100.929
-margin_right = 541.948
-margin_bottom = 859.071
+[node name="ContainerGameover" type="Control"]
+margin_right = 540.0
+margin_bottom = 960.0
 script = ExtResource( 1 )
 
-[node name="PlayAgainBtn" type="Button" parent="."]
-anchor_right = 1.0
-margin_bottom = 60.0
-custom_fonts/font = ExtResource( 2 )
-text = "PLAY AGAIN"
-flat = true
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 540.0
+margin_bottom = 960.0
+texture = ExtResource( 2 )
 
-[connection signal="gui_input" from="PlayAgainBtn" to="." method="_on_PlayAgainBtn_gui_input"]
+[node name="GameOver" type="TextureRect" parent="."]
+margin_left = -6.10352e-005
+margin_top = 128.521
+margin_right = 540.0
+margin_bottom = 228.521
+texture = ExtResource( 3 )
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 418.882
+margin_bottom = -337.118
+
+[node name="MainMenuBtn" type="TextureButton" parent="Buttons"]
+margin_right = 540.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="PlayAgainBtn" type="TextureButton" parent="Buttons"]
+margin_top = 104.0
+margin_right = 540.0
+margin_bottom = 204.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+
+[connection signal="gui_input" from="Buttons/PlayAgainBtn" to="." method="_on_PlayAgainBtn_gui_input"]

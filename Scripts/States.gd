@@ -2,7 +2,7 @@ extends Spatial
 
 var timer = null
 
-export var maxfuel = 200
+#export var maxfuel = 200
 export var fuel = 100
 
 export var fuelCombustion = [ 7, 6, 5, 4, 3, 2, 1, -1, -5 ]

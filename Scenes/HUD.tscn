@@ -63,10 +63,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Speed" type="Label" parent="."]
-margin_left = 2.27519
-margin_top = 44.3664
-margin_right = 272.275
-margin_bottom = 81.3664
+margin_left = 3.27519
+margin_top = 74.3664
+margin_right = 273.275
+margin_bottom = 111.366
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
@@ -76,9 +76,10 @@ script = SubResource( 1 )
 [node name="Fuel" type="Label" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -270.0
-margin_top = 46.6416
-margin_bottom = 72.6416
+margin_left = -269.0
+margin_top = 76.6416
+margin_right = 1.0
+margin_bottom = 102.642
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 2
@@ -95,10 +96,9 @@ script = SubResource( 3 )
 [node name="FuelBar" type="TextureProgress" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -200.0
-margin_top = 17.1417
-margin_right = 200.0
-margin_bottom = 57.1417
+margin_left = -270.0
+margin_right = 270.0
+margin_bottom = 100.0
 max_value = 200.0
 value = 200.0
 texture_under = ExtResource( 2 )

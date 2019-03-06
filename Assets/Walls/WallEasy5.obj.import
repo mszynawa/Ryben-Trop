@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/WallEasy5.obj-402286bfef494f2104979f2b48db2782.mesh"
+
+[deps]
+
+files=[ "res://.import/WallEasy5.obj-402286bfef494f2104979f2b48db2782.mesh" ]
+
+source_file="res://Assets/Walls/WallEasy5.obj"
+dest_files=[ "res://.import/WallEasy5.obj-402286bfef494f2104979f2b48db2782.mesh", "res://.import/WallEasy5.obj-402286bfef494f2104979f2b48db2782.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
