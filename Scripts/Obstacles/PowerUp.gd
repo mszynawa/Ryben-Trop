@@ -1,6 +1,6 @@
 extends "res://Scripts/Obstacles/Obstacles.gd"
 
-export var acceleration = 15
+export var acceleration = 25
 export var boostTime = 5
 
 func on_body_entered(body):
