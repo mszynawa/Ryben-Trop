@@ -9,6 +9,8 @@ var player = null
 var time = 0
 var time_mult = 1.0
 
+var addScore = 1
+
 signal changeScore
 
 func _ready():
@@ -33,10 +35,6 @@ func onPlayerDead():
 	get_node("hud").add_child(gameover)
 	pass
 
-func onTimerTimeout():
-	global.setPlayerScore(1)
-	emit_signal("changeScore")
-	
 func _physics_process(delta):
 	time += delta * time_mult
 	
@@ -63,7 +61,11 @@ func _physics_process(delta):
 	elif (time  >= 55 and time <= 60):
 		player.speed = player.originSpeed + intervalArray[7]
 	elif (time  >= 60 and time <= 65):
-		player.speed = player.originSpeed + intervalArray[8]		
+		player.speed = player.originSpeed + intervalArray[8]
 	elif (time  >= 65):
 		player.speed = player.originSpeed + intervalArray[10]
 		pass
+
+func onTimerTimeout():
+	global.setPlayerScore(addScore)
+	emit_signal("changeScore")

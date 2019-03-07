@@ -3,6 +3,7 @@ extends "res://Scripts/Obstacles/Obstacles.gd"
 export var acceleration = 25
 export var boostTime = 5
 export var takeFuel = 20
+export var point = 5
 
 func on_body_entered(body):
 	if body.is_in_group("player"):
@@ -12,6 +13,7 @@ func on_body_entered(body):
 		var speed = body.originSpeed
 		body.originSpeed = speed + acceleration #speed + (speed * 30 / 100)
 
+		utils.get_main_node().addScore = utils.get_main_node().addScore + point
 		var timer = Timer.new()
 		timer.set_one_shot(false)
 		timer.set_wait_time(boostTime)
@@ -28,6 +30,7 @@ func boost_over(timer):
 	var speed = player.originSpeed
 	player.originSpeed = speed - acceleration #speed - (speed * 30 / 100)
 
+	utils.get_main_node().addScore = utils.get_main_node().addScore - point
 	timer.queue_free()
 	queue_free()
 	pass
