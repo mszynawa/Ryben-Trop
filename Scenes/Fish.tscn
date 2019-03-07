@@ -61,22 +61,21 @@ surfaces/4 = {
 "vertex_count": 1028
 }
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.921569, 0.921569, 0.921569, 1 )
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.921569, 0.670588, 0, 1 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.878431, 0.196078, 0.196078, 1 )
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_color = Color( 0.956863, 0.803922, 0.27451, 1 )
 
-[sub_resource type="SpatialMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=6]
 
-[sub_resource type="Animation" id=2]
-resource_name = "default"
+[sub_resource type="Animation" id=7]
 length = 0.791667
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Armature/Skeleton:a")
@@ -329,15 +328,15 @@ bones/18/bound_children = [  ]
 
 [node name="Fish" type="MeshInstance" parent="Armature/Skeleton"]
 mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-material/1 = SubResource( 4 )
-material/2 = SubResource( 5 )
-material/3 = SubResource( 6 )
-material/4 = SubResource( 7 )
+material/0 = SubResource( 2 )
+material/1 = SubResource( 3 )
+material/2 = SubResource( 4 )
+material/3 = SubResource( 5 )
+material/4 = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "default-loop"
-anims/default = SubResource( 2 )
+anims/default = SubResource( 7 )
 anims/default-loop = SubResource( 8 )
 
 [node name="States" parent="." instance=ExtResource( 2 )]
