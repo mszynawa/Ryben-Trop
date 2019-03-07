@@ -1,9 +1,12 @@
 extends KinematicBody
 
 export var speed = 20
+#warning-ignore:unused_class_variable
 export var originSpeed = 20
 
+#warning-ignore:unused_class_variable
 export var minSpeed = 20
+#warning-ignore:unused_class_variable
 export var maxSpeed = 100
 
 var direction = Vector3(0, 0, 0)

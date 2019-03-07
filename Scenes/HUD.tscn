@@ -99,7 +99,6 @@ anchor_right = 0.5
 margin_left = -270.0
 margin_right = 270.0
 margin_bottom = 100.0
-max_value = 200.0
 value = 100.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 3 )

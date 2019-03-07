@@ -13,3 +13,7 @@ func getPlayerScore():
 func setPlayerScore(score):
 	playerScore = playerScore + score
 	pass
+	
+func restartPlayerScore():
+	playerScore = 0
+	pass

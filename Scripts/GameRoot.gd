@@ -30,6 +30,7 @@ func _ready():
 
 func onPlayerDead():
 	print("[GameRoot] Fish dead.")
+	global.restartPlayerScore()
 	var gameover = preload("res://Scenes/HUD/ContainerGameover.tscn").instance()
 	get_node("hud").add_child(gameover)
 	pass
