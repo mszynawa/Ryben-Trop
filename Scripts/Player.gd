@@ -19,13 +19,7 @@ signal playerDead
 func _ready():
 	#leftScreen.connect("gui_input", self, "change_position")
 	#animFish = get_node("AnimationPlayer")
-	
 	add_to_group("player")
-	
-	# Set animation
-	#var animToPlay = "default"
-#	get_node("AnimationPlayer").get_animation(animToPlay).set_loop(true)
-#	animFish.play(animToPlay)
 
 export var LEFT = Vector3(0, 0, -0.5)
 export var RIGHT = Vector3(0, 0, 0.5)
@@ -63,15 +57,11 @@ func _physics_process(delta):
 
 func _on_LeftScreen_gui_input(event):
 	#if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-	print("trzymam")
 	if event is InputEventScreenTouch and event.pressed:
-	
 		#print(event)
 		direction = Vector3(0, 0, 0)
 		direction.z -= 1
 		collision = move_and_collide(direction)
-	elif event is InputEventScreenTouch:
-		print("12")
 		pass 
 
 func _on_RightScreen_gui_input(event):

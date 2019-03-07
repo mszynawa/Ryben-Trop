@@ -36,10 +36,13 @@ func onTimerTimeout():
 	elif (parent.speed >= 70 and parent.speed < 80):
 		fuel = fuel - fuelCombustion[5]
 	elif (parent.speed >= 80 and parent.speed < 90):
-		fuel = fuel - fuelCombustion[6]	
+		fuel = fuel - fuelCombustion[6]
 	elif (parent.speed >= 90 and parent.speed < 100):
 		fuel = fuel - fuelCombustion[7]
 	elif (parent.speed == 100):
 		fuel = fuel - fuelCombustion[8]
-	
-	emit_signal("fuel_system", fuel)
+		
+	if (fuel <= 0):
+		get_parent().emit_signal("playerDead")
+	else:
+		emit_signal("fuel_system", fuel)
