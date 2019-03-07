@@ -1,16 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GUI/MainMenuBg.png" type="Texture" id=2]
 [ext_resource path="res://Assets/GUI/Title.png" type="Texture" id=3]
 [ext_resource path="res://Assets/GUI/NewGame.png" type="Texture" id=4]
-[ext_resource path="res://Assets/GUI/NewGameSelected.png" type="Texture" id=5]
-[ext_resource path="res://Assets/GUI/Options.png" type="Texture" id=6]
-[ext_resource path="res://Assets/GUI/OptionsSelected.png" type="Texture" id=7]
-[ext_resource path="res://Assets/GUI/Credits.png" type="Texture" id=8]
-[ext_resource path="res://Assets/GUI/CreditsSelected.png" type="Texture" id=9]
-[ext_resource path="res://Assets/GUI/Exit.png" type="Texture" id=10]
-[ext_resource path="res://Assets/GUI/ExitSelected.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GUI/Leaderboard.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GUI/Credits.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GUI/Exit.png" type="Texture" id=7]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -44,27 +40,25 @@ margin_bottom = 412.0
 margin_right = 540.0
 margin_bottom = 100.0
 texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
 
-[node name="OptionsButton" type="TextureButton" parent="Menu/Buttons"]
+[node name="ScoreButton" type="TextureButton" parent="Menu/Buttons"]
 margin_top = 104.0
 margin_right = 540.0
 margin_bottom = 204.0
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
+texture_normal = ExtResource( 5 )
 
 [node name="CreditsButton" type="TextureButton" parent="Menu/Buttons"]
 margin_top = 208.0
 margin_right = 540.0
 margin_bottom = 308.0
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
+texture_normal = ExtResource( 6 )
 
-[node name="TextureButton" type="TextureButton" parent="Menu/Buttons"]
+[node name="ExitButton" type="TextureButton" parent="Menu/Buttons"]
 margin_top = 312.0
 margin_right = 540.0
 margin_bottom = 412.0
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
+texture_normal = ExtResource( 7 )
 
 [connection signal="gui_input" from="Menu/Buttons/StartButton" to="." method="_on_TextureButton_gui_input"]
+[connection signal="gui_input" from="Menu/Buttons/ScoreButton" to="." method="_on_ScoreButton_gui_input"]
+[connection signal="gui_input" from="Menu/Buttons/CreditsButton" to="." method="_on_CreditsButton_gui_input"]
