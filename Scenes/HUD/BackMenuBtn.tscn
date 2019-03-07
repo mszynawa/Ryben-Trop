@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/GUI/MainMenu.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GUI/MainMenuSelect.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/GUI/BackMenuBtn.gd" type="Script" id=3]
+
+[node name="MainMenuBtn" type="TextureButton"]
+margin_right = 540.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[connection signal="gui_input" from="." to="." method="_on_MainMenuBtn_gui_input"]

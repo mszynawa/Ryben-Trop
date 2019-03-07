@@ -3,10 +3,10 @@
 [ext_resource path="res://Scripts/HUD/ContainerGameover.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GUI/GameOverBg.png" type="Texture" id=2]
 [ext_resource path="res://Assets/GUI/GameOver.png" type="Texture" id=3]
-[ext_resource path="res://Assets/GUI/MainMenu.png" type="Texture" id=4]
-[ext_resource path="res://Assets/GUI/MainMenuSelect.png" type="Texture" id=5]
-[ext_resource path="res://Assets/GUI/SwimAgain.png" type="Texture" id=6]
-[ext_resource path="res://Assets/GUI/SwimAgainSelect.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/HUD/BackMenuBtn.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/GUI/SwimAgain.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GUI/SwimAgainSelect.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/GUI/InputEdit.gd" type="Script" id=7]
 
 [node name="ContainerGameover" type="Control"]
 margin_right = 540.0
@@ -31,17 +31,19 @@ anchor_bottom = 1.0
 margin_top = 418.882
 margin_bottom = -337.118
 
-[node name="MainMenuBtn" type="TextureButton" parent="Buttons"]
-margin_right = 540.0
-margin_bottom = 100.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
+[node name="MainMenuBtn" parent="Buttons" instance=ExtResource( 4 )]
 
 [node name="PlayAgainBtn" type="TextureButton" parent="Buttons"]
 margin_top = 104.0
 margin_right = 540.0
 margin_bottom = 204.0
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="InputEdit" type="LineEdit" parent="."]
+margin_right = 223.0
+margin_bottom = 59.0
+script = ExtResource( 7 )
 
 [connection signal="gui_input" from="Buttons/PlayAgainBtn" to="." method="_on_PlayAgainBtn_gui_input"]
+[connection signal="text_entered" from="InputEdit" to="InputEdit" method="_on_InputEdit_text_entered"]
