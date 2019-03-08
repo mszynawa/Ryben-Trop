@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gra 3speed.wav-005d4e2ab3f0e17381aeee65da4161a8.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/gra 3speed.wav"
+dest_files=[ "res://.import/gra 3speed.wav-005d4e2ab3f0e17381aeee65da4161a8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
