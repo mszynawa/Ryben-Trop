@@ -7,6 +7,7 @@
 [ext_resource path="res://Scripts/Floor.gd" type="Script" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
+params_diffuse_mode = 4
 albedo_color = Color( 0.666667, 0.905882, 1, 1 )
 albedo_texture = ExtResource( 2 )
 normal_enabled = true

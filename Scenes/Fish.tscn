@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/States.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Fish/Rybanormal.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fish/Oczydiffuse.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/States.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Fish"
@@ -65,15 +67,23 @@ surfaces/4 = {
 albedo_color = Color( 0.921569, 0.921569, 0.921569, 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.921569, 0.670588, 0, 1 )
+params_diffuse_mode = 4
+albedo_color = Color( 1, 0.631373, 0, 1 )
+metallic = 0.29
+metallic_specular = 0.37
+normal_enabled = true
+normal_scale = 3.0
+normal_texture = ExtResource( 2 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.878431, 0.196078, 0.196078, 1 )
 
 [sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.956863, 0.803922, 0.27451, 1 )
+params_diffuse_mode = 4
+albedo_color = Color( 0.654902, 0.392157, 0.0862745, 1 )
 
 [sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 3 )
 
 [sub_resource type="Animation" id=7]
 length = 0.791667
@@ -340,7 +350,7 @@ autoplay = "default-loop"
 anims/default = SubResource( 7 )
 anims/default-loop = SubResource( 8 )
 
-[node name="States" parent="." instance=ExtResource( 2 )]
+[node name="States" parent="." instance=ExtResource( 4 )]
 
 [node name="Shape" type="CollisionShape" parent="."]
 shape = SubResource( 9 )

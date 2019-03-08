@@ -21,6 +21,7 @@ preload("res://Scenes/Walls/WallHard3.tscn") ]
 var wallData = [ ]
 var floorData = [ ]
 
+#warning-ignore:unused_class_variable
 onready var container = get_node("Container")
 
 func _ready():
@@ -38,6 +39,7 @@ func _ready():
 	get_node("ContainerFloor").add_child(new_floor)
 	
 	#Random pozostałe 2 mapy
+#warning-ignore:unused_variable
 	for i in range(AMOUNT_TO_FILL_VIEW):
 		spawn_and_move()
 		#spawn_floor()
@@ -77,10 +79,11 @@ func spawn_walls():
 	new_walls.set_transform(get_transform())
 	#new_walls.transform(transform)
 	#new_walls.connect("destroyed", self, "go_next")
+	new_walls.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition
 	get_node("Container").add_child(new_walls)
 	
 	#new_walls.translation = translation + Vector3(WALL_WIDTH, 0, 0)
-	new_walls.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition
+	#new_walls.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition
 	pass
 
 func spawn_floor():
@@ -102,9 +105,10 @@ func spawn_floor():
 	new_floor.set_transform(get_transform())
 	#new_walls.transform(transform)
 	new_floor.connect("destroyed", self, "go_next_floor")
+	new_floor.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition
 	get_node("ContainerFloor").add_child(new_floor)
 	
-	new_floor.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition
+	#new_floor.translation = translation + Vector3(WALL_WIDTH, 0, 0) + tempPosition
 	pass
 
 func go_next_floor(object):
@@ -128,7 +132,7 @@ func go_next(object):
 		#wallData[0] = wallData[1]
 		#wallData[1] = wallData[2]
 		
-		print(wallData)
+		#print(wallData)
 		#spawn new object
 		spawn_and_move()
 	pass

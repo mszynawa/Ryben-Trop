@@ -42,10 +42,10 @@ func onTimerTimeout():
 	elif (parent.speed == 100):
 		fuel = fuel - fuelCombustion[8]
 		
+	emit_signal("fuel_system", fuel)
+	
 	if (fuel <= 0):
 		get_parent().emit_signal("playerDead")
 	elif (fuel >= 100):
 #warning-ignore:standalone_expression
 		fuel == 100
-	else:
-		emit_signal("fuel_system", fuel)
