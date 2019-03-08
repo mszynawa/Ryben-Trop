@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/przejscie miedzy menu a gra 5s.wav-e39dac0986f142d01b9b0795b95c93b6.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/przejscie miedzy menu a gra 5s.wav"
+dest_files=[ "res://.import/przejscie miedzy menu a gra 5s.wav-e39dac0986f142d01b9b0795b95c93b6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

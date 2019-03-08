@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/paliwo.wav-714f4766db7b948bb1466417d61699b5.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/paliwo.wav"
+dest_files=[ "res://.import/paliwo.wav-714f4766db7b948bb1466417d61699b5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -5,4 +5,3 @@ func _on_InputEdit_text_entered(new_text):
 	if new_text != "": nick = new_text
 	self.text = nick
 	print(nick)
-	#$"..".finished_input(nick)
