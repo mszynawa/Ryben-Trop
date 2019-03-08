@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/GUI/Scoreboard.gd" type="Script" id=1]
 [ext_resource path="res://addons/gamejolt_api_v2/main.gd" type="Script" id=2]
 [ext_resource path="res://addons/gamejolt_api_v2/gj_icon.png" type="Texture" id=3]
 [ext_resource path="res://Assets/GUI/ScoreBg.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Menu/BackMenuBtn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Sounds/intromenu.wav" type="AudioStream" id=6]
 
 [node name="Scoreboard" type="Control"]
 anchor_right = 1.0
@@ -35,6 +36,10 @@ custom_constants/separation = 11
 margin_left = -6.10352e-005
 margin_top = 855.539
 margin_bottom = 955.539
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
 
 [connection signal="api_scores_fetched" from="GameJoltAPI" to="." method="_on_GameJoltAPI_api_scores_fetched"]
 [connection signal="api_session_opened" from="GameJoltAPI" to="." method="_on_GameJoltAPI_api_session_opened"]

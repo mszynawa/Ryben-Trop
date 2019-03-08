@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/GUI/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GUI/MainMenuBg.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/GUI/Leaderboard.png" type="Texture" id=5]
 [ext_resource path="res://Assets/GUI/Credits.png" type="Texture" id=6]
 [ext_resource path="res://Assets/GUI/Exit.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sounds/intromenu.wav" type="AudioStream" id=8]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -58,6 +59,10 @@ margin_top = 312.0
 margin_right = 540.0
 margin_bottom = 412.0
 texture_normal = ExtResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 
 [connection signal="gui_input" from="Menu/Buttons/StartButton" to="." method="_on_TextureButton_gui_input"]
 [connection signal="gui_input" from="Menu/Buttons/ScoreButton" to="." method="_on_ScoreButton_gui_input"]
