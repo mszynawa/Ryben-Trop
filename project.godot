@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 utils="*res://Scripts/utils.gd"
 global="*res://Scenes/global.tscn"
+CheckNConnection="*res://Scripts/CheckNConnection.gd"
 
 [display]
 

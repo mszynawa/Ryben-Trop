@@ -9,14 +9,14 @@ const WALL_WIDTH = 300
 const AMOUNT_TO_FILL_VIEW = 2
 
 var wallArray = [ preload("res://Scenes/Walls/WallEasy1.tscn"), 
-preload("res://Scenes/Walls/WallEasy2.tscn"), 
-preload("res://Scenes/Walls/WallEasy3.tscn"),
-preload("res://Scenes/Walls/WallMedium1.tscn"),
-preload("res://Scenes/Walls/WallMedium2.tscn"),
-preload("res://Scenes/Walls/WallMedium3.tscn"),
-preload("res://Scenes/Walls/WallHard1.tscn"),
-preload("res://Scenes/Walls/WallHard2.tscn"),
-preload("res://Scenes/Walls/WallHard3.tscn") ]
+	preload("res://Scenes/Walls/WallEasy2.tscn"), 
+	preload("res://Scenes/Walls/WallEasy3.tscn"),
+	preload("res://Scenes/Walls/WallMedium1.tscn"),
+	preload("res://Scenes/Walls/WallMedium2.tscn"),
+	preload("res://Scenes/Walls/WallMedium3.tscn"),
+	preload("res://Scenes/Walls/WallHard1.tscn"),
+	preload("res://Scenes/Walls/WallHard2.tscn"),
+	preload("res://Scenes/Walls/WallHard3.tscn") ]
 
 var wallData = [ ]
 var floorData = [ ]

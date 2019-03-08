@@ -46,6 +46,7 @@ func onTimerTimeout():
 	
 	if (fuel <= 0):
 		get_parent().emit_signal("playerDead")
+		get_tree().paused = true
 	elif (fuel >= 100):
 #warning-ignore:standalone_expression
 		fuel == 100
