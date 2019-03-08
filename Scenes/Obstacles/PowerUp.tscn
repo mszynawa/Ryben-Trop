@@ -8,6 +8,4 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material/0 = ExtResource( 2 )
 script = ExtResource( 3 )
-boostTime = 3
-point = 40
 

@@ -1,9 +1,9 @@
 extends "res://Scripts/Obstacles/Obstacles.gd"
 
-export var acceleration = 25
-export var boostTime = 5
+export var acceleration = 15
+export var boostTime = 3
 export var takeFuel = 20
-export var point = 5
+export var point = 2
 
 func on_body_entered(body):
 	if body.is_in_group("player"):

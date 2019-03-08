@@ -41,30 +41,30 @@ func _physics_process(delta):
 	
 	if (time <= 5):
 		player.speed = player.originSpeed + intervalArray[0]
-	elif (time  >= 5 and time <= 10):
+	elif (time  >= 5 and time <= 15):
 		player.speed = player.originSpeed + intervalArray[1]
-	elif (time  >= 10 and time <= 15):
+	elif (time  >= 15 and time <= 25):
 		player.speed = player.originSpeed + intervalArray[2]
-	elif (time  >= 20 and time <= 25):
+	elif (time  >= 25 and time <= 35):
 		player.speed = player.originSpeed + intervalArray[3]
-	elif (time  >= 25 and time <= 30):
+	elif (time  >= 35 and time <= 45):
 		player.speed = player.originSpeed + intervalArray[4]
-	elif (time  >= 30 and time <= 35):
+	elif (time  >= 45 and time <= 55):
 		player.speed = player.originSpeed + intervalArray[5]
-	elif (time  >= 35 and time <= 40):
+	elif (time  >= 55 and time <= 65):
 		player.speed = player.originSpeed + intervalArray[4]
-	elif (time  >= 40 and time <= 45):
+	elif (time  >= 65 and time <= 75):
 		player.speed = player.originSpeed + intervalArray[3]
-	elif (time  >= 45 and time <= 50):
+	elif (time  >= 75 and time <= 85):
 		player.speed = player.originSpeed + intervalArray[5]
-	elif (time  >= 50 and time <= 55):
+	elif (time  >= 85 and time <= 95):
 		player.speed = player.originSpeed + intervalArray[6]
-	elif (time  >= 55 and time <= 60):
+	elif (time  >= 95 and time <= 105):
 		player.speed = player.originSpeed + intervalArray[7]
-	elif (time  >= 60 and time <= 65):
+	elif (time  >= 105 and time <= 115):
 		player.speed = player.originSpeed + intervalArray[8]
-	elif (time  >= 65):
-		player.speed = player.originSpeed + intervalArray[9]
+	elif (time  >= 115):
+		player.speed = player.originSpeed + intervalArray[7]
 		pass
 
 func onTimerTimeout():
