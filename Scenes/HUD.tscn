@@ -54,16 +54,13 @@ func fuel_system(fuel):
 
 # script: fuel_bar built-in
 # extends TextureProgress
-
 #func _ready():
 	#var ship = get_node(\"/root/GameRoot\").get_node(\"ship\").get_node(\"states/fuel\")
 	#ship.connect(\"fuel_system\", self, \"fuel_system\")
 	#print(get_parent().get_node(\"fuel_bar\").name)
-	
 	#pass
 	
 #func fuel_system(fuel):
-
 	#get_parent().get_node(\"fuel_bar\").value = fuel
 	#pass"
 

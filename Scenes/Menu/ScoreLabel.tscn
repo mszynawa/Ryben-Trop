@@ -6,18 +6,19 @@
 margin_right = 420.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 0, 54 )
-custom_constants/separation = 160
+custom_constants/separation = 70
 
 [node name="NicknameLabel" type="Label" parent="."]
-margin_right = 106.0
+margin_right = 200.0
 margin_bottom = 54.0
+rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 text = "Guest"
 align = 1
 
 [node name="ScoreLabel" type="Label" parent="."]
-margin_left = 266.0
-margin_right = 416.0
+margin_left = 270.0
+margin_right = 420.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 150, 54 )
 custom_fonts/font = ExtResource( 1 )
