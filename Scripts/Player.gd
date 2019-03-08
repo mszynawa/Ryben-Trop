@@ -24,8 +24,8 @@ func _ready():
 	#animFish = get_node("AnimationPlayer")
 	add_to_group("player")
 
-export var LEFT = Vector3(0, 0, -0.5)
-export var RIGHT = Vector3(0, 0, 0.5)
+export var LEFT = Vector3(0, 0, -0.4)
+export var RIGHT = Vector3(0, 0, 0.4)
 
 func _physics_process(delta):
 	direction = Vector3(1, 0, 0)
