@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/efektless.wav-5c5f2563668da50c45f120f9ad50b5ce.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/efektless.wav"
+dest_files=[ "res://.import/efektless.wav-5c5f2563668da50c45f120f9ad50b5ce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
