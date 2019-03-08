@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fish/Rybanormal.png" type="Texture" id=2]
@@ -233,6 +233,9 @@ tracks/9/enabled = true
 tracks/9/keys = PoolRealArray( 0.0416666, 1, -5.96046e-008, 9.31323e-008, 2.08616e-007, 0.0111093, -0.141875, -0.0131302, 0.989735, 1, 1, 1, 0.208333, 1, -1.19209e-007, 7.45058e-008, 2.38419e-007, 0.000464723, 0.0280793, -0.015789, 0.999481, 1, 1, 1, 0.333333, 1, -1.04308e-007, 6.33299e-008, 5.96046e-008, 0.0228435, -0.120981, -0.0479172, 0.991234, 1, 1, 1, 0.416667, 1, -4.47035e-008, 7.45058e-008, 5.96046e-008, 0.0374045, -0.218378, -0.068623, 0.97273, 1, 1, 1, 0.541667, 1, -1.19209e-007, 1.04308e-007, 2.08616e-007, 0.015397, -0.0712981, -0.0372668, 0.99664, 1, 1, 1, 0.625, 1, 0, 7.45058e-008, 2.08616e-007, 0.000464724, 0.0280793, -0.015789, 0.999481, 1, 1, 1, 0.791667, 1, -5.96046e-008, 9.31323e-008, 2.08616e-007, 0.0111093, -0.141875, -0.0131302, 0.989735, 1, 1, 1 )
 
 [sub_resource type="SphereShape" id=9]
+radius = 0.88851
+
+[sub_resource type="SphereShape" id=10]
 
 [node name="Fish" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -353,5 +356,9 @@ anims/default-loop = SubResource( 8 )
 [node name="States" parent="." instance=ExtResource( 4 )]
 
 [node name="Shape" type="CollisionShape" parent="."]
+transform = Transform( 1.72076, 0, 0, 0, 1, 0, 0, 0, 1.7397, 0.0547583, 0, 0 )
 shape = SubResource( 9 )
+
+[node name="Shape2" type="CollisionShape" parent="."]
+shape = SubResource( 10 )
 
