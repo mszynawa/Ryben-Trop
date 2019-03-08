@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/HUD/ContainerGameover.gd" type="Script" id=1]
 [ext_resource path="res://addons/gamejolt_api_v2/main.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Menu/BackMenuBtn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Fonts/Eaterfont.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Scripts/GUI/InputEdit.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Sounds/przegrana.wav" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -65,9 +66,9 @@ margin_bottom = 204.0
 [node name="InputEdit" type="LineEdit" parent="."]
 modulate = Color( 1, 1, 1, 0.388235 )
 margin_left = 50.7562
-margin_top = 618.269
+margin_top = 224.853
 margin_right = 497.756
-margin_bottom = 722.269
+margin_bottom = 328.853
 custom_fonts/font = SubResource( 1 )
 custom_colors/selection_color = Color( 1, 1, 1, 1 )
 custom_colors/cursor_color = Color( 1, 1, 1, 1 )
@@ -80,8 +81,13 @@ max_length = 13
 placeholder_text = "Nickname"
 script = ExtResource( 10 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 10.0
+autoplay = true
+
 [connection signal="api_scores_added" from="GameJoltAPI" to="." method="_on_GameJoltAPI_api_scores_added"]
 [connection signal="api_session_opened" from="GameJoltAPI" to="." method="_on_GameJoltAPI_api_session_opened"]
 [connection signal="gui_input" from="Buttons/PlayAgainBtn" to="." method="_on_PlayAgainBtn_gui_input"]
-[connection signal="text_entered" from="InputEdit" to="InputEdit" method="_on_InputEdit_text_entered"]
 [connection signal="text_entered" from="InputEdit" to="." method="_on_InputEdit_text_entered"]
+[connection signal="text_entered" from="InputEdit" to="InputEdit" method="_on_InputEdit_text_entered"]
