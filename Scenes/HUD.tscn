@@ -48,7 +48,7 @@ func _ready():
 
 func fuel_system(fuel):
 	#get_parent().get_node(\"fuel_bar\").value = fue
-	get_parent().get_node(\"Fuel\").text = str(fuel)
+	get_parent().get_node(\"Fuel2\").text = str(fuel)
 	pass
 
 
