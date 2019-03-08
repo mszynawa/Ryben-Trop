@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/prog punktowy.wav-27e1c71c19c2d2270f9c649a401cf0ea.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/prog punktowy.wav"
+dest_files=[ "res://.import/prog punktowy.wav-27e1c71c19c2d2270f9c649a401cf0ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
