@@ -352,7 +352,6 @@ anims/default = SubResource( 7 )
 anims/default-loop = SubResource( 8 )
 
 [node name="States" parent="." instance=ExtResource( 4 )]
-fuel = 5
 
 [node name="Shape" type="CollisionShape" parent="."]
 transform = Transform( -1.01189e-007, 0, 2.34042, 0, 1, 0, -1.85459, 0, -8.1959e-008, -0.412396, 0, 0 )
