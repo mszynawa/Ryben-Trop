@@ -15,6 +15,7 @@ signal changeScore
 
 func _ready():
 	get_tree().paused = false
+
 	player = utils.get_main_node().get_node("Fish")
 	player.connect("playerDead", self, "onPlayerDead")
 	
@@ -30,7 +31,7 @@ func _ready():
 
 func onPlayerDead():
 	print("[GameRoot] Fish dead.")
-	global.restartPlayerScore()
+
 	var gameover = preload("res://Scenes/HUD/ContainerGameover.tscn").instance()
 	get_node("hud").add_child(gameover)
 	pass
@@ -63,7 +64,7 @@ func _physics_process(delta):
 	elif (time  >= 60 and time <= 65):
 		player.speed = player.originSpeed + intervalArray[8]
 	elif (time  >= 65):
-		player.speed = player.originSpeed + intervalArray[10]
+		player.speed = player.originSpeed + intervalArray[9]
 		pass
 
 func onTimerTimeout():

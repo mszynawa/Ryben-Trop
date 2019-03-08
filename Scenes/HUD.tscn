@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Fonts/LatoBold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/GUI/FuelBar.png" type="Texture" id=2]
@@ -58,6 +58,13 @@ func changeScoreOnHUD():
 	var score = global.getPlayerScore()
 	get_parent().get_node(\"Score\").text = str(score)"
 
+[sub_resource type="GDScript" id=4]
+script/source = "extends Label
+
+func _ready():
+	self.text = String(global.bestscore)
+	pass"
+
 [node name="HUD" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -103,4 +110,13 @@ value = 100.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 3 )
 script = ExtResource( 4 )
+
+[node name="BestScore" type="Label" parent="."]
+margin_left = 484.417
+margin_top = 4.28688
+margin_right = 536.417
+margin_bottom = 41.2869
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+script = SubResource( 4 )
 

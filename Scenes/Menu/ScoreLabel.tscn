@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Fonts/Eaterfont27.tres" type="DynamicFont" id=1]
+
+[node name="RowScoreboard" type="HBoxContainer"]
+margin_right = 420.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 0, 54 )
+custom_constants/separation = 160
+
+[node name="NicknameLabel" type="Label" parent="."]
+margin_right = 106.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 1 )
+text = "Guest"
+align = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 266.0
+margin_right = 416.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 150, 54 )
+custom_fonts/font = ExtResource( 1 )
+text = "1250"
+align = 1
+
