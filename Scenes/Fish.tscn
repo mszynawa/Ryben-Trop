@@ -226,6 +226,7 @@ tracks/9/keys = PoolRealArray( 0.0416666, 1, -5.96046e-008, 9.31323e-008, 2.0861
 
 [node name="Fish" type="KinematicBody"]
 script = ExtResource( 1 )
+maxSpeed = 120
 
 [node name="Armature" type="Spatial" parent="."]
 
