@@ -39,9 +39,9 @@ texture = ExtResource( 4 )
 
 [node name="Score" type="Label" parent="."]
 margin_left = 136.0
-margin_top = 344.0
+margin_top = 520.849
 margin_right = 407.0
-margin_bottom = 497.0
+margin_bottom = 673.849
 custom_fonts/font = ExtResource( 5 )
 align = 1
 
