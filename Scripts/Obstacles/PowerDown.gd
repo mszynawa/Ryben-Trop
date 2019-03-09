@@ -3,7 +3,7 @@ extends "res://Scripts/Obstacles/Obstacles.gd"
 export var slowdown = 15
 export var boostTime = 3
 export var addFuel = 20
-export var point = 0.5
+export var point = 0
 
 func on_body_entered(body):
 	if body.is_in_group("player"):
